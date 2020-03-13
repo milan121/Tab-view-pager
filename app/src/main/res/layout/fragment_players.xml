@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Gray"
+    tools:context=".PlayersFragment">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/toggleScoreCard"
+            android:fontFamily="@font/circularstd_medium"
+            custom:cornerRadius="20dp"
+            android:elevation="5dp"
+            custom:textToggleLeft="CSK"
+            custom:textToggleRight="MI"
+            style="@style/MyCustomText"
+            custom:activeBgColor="@android:color/black"
+            custom:activeTextColor="@android:color/white"
+            custom:inactiveBgColor="@android:color/white"
+            custom:inactiveTextColor="@android:color/black"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Players">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textEleven"
+                android:text="Playing XI"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorTextGray"
+                android:textSize="16sp"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycleplayingEleven"
+                android:paddingHorizontal="8dp"
+                android:background="@android:color/white"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textBench"
+                android:text="Bench"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/colorTextGray"
+                android:textSize="16sp"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycleBench"
+                android:paddingHorizontal="8dp"
+                android:background="@android:color/white"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
